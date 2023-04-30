@@ -1,0 +1,320 @@
+<?xml version="1.0"?>
+<rdf:RDF xmlns="http://www.semanticweb.org/irene/ontologies/2023/3/Spanish_Wine#"
+     xml:base="http://www.semanticweb.org/irene/ontologies/2023/3/Spanish_Wine"
+     xmlns:owl="http://www.w3.org/2002/07/owl#"
+     xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+     xmlns:xml="http://www.w3.org/XML/1998/namespace"
+     xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#">
+    <owl:Ontology rdf:about="http://www.semanticweb.org/irene/ontologies/2023/3/Spanish_Wine">
+        <rdfs:comment>@Authors:
+Irene Cañabate Redondo</rdfs:comment>
+    </owl:Ontology>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Annotation properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.w3.org/2000/01/rdf-schema#sameAs -->
+
+    <owl:AnnotationProperty rdf:about="http://www.w3.org/2000/01/rdf-schema#sameAs"/>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Classes
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.semanticweb.org/irene/ontologies/2023/3/Spanish_Wine#Acidity -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/irene/ontologies/2023/3/Spanish_Wine#Acidity">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/irene/ontologies/2023/3/Spanish_Wine#WineCharacteristics"/>
+        <rdfs:comment>Recull el nivell d&apos;acidesa dels vins</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/irene/ontologies/2023/3/Spanish_Wine#AcidityFree -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/irene/ontologies/2023/3/Spanish_Wine#AcidityFree">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/irene/ontologies/2023/3/Spanish_Wine#Acidity"/>
+        <rdfs:comment>Indica que el vi no és àcid</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/irene/ontologies/2023/3/Spanish_Wine#Body -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/irene/ontologies/2023/3/Spanish_Wine#Body">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/irene/ontologies/2023/3/Spanish_Wine#WineCharacteristics"/>
+        <rdfs:comment>Recull el valor del cos dels vins</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/irene/ontologies/2023/3/Spanish_Wine#CheapPrice -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/irene/ontologies/2023/3/Spanish_Wine#CheapPrice">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/irene/ontologies/2023/3/Spanish_Wine#Price"/>
+        <rdfs:comment>Recull els vins barats</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/irene/ontologies/2023/3/Spanish_Wine#Country -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/irene/ontologies/2023/3/Spanish_Wine#Country">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/irene/ontologies/2023/3/Spanish_Wine#Location"/>
+        <rdfs:comment>Indica el país d&apos;origen dels vins</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/irene/ontologies/2023/3/Spanish_Wine#ExpensivePrice -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/irene/ontologies/2023/3/Spanish_Wine#ExpensivePrice">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/irene/ontologies/2023/3/Spanish_Wine#Price"/>
+        <rdfs:comment>Recull els vins cars</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/irene/ontologies/2023/3/Spanish_Wine#FeedBack -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/irene/ontologies/2023/3/Spanish_Wine#FeedBack">
+        <rdfs:comment>Recull el nombre de valoracions i la qualificació dels vins</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/irene/ontologies/2023/3/Spanish_Wine#HighAcidity -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/irene/ontologies/2023/3/Spanish_Wine#HighAcidity">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/irene/ontologies/2023/3/Spanish_Wine#Acidity"/>
+        <rdfs:comment>indica si el vi és molt àcid</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/irene/ontologies/2023/3/Spanish_Wine#HighInteraction -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/irene/ontologies/2023/3/Spanish_Wine#HighInteraction">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/irene/ontologies/2023/3/Spanish_Wine#NumReviews"/>
+        <rdfs:comment>Vins amb més nombre de valoracions</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/irene/ontologies/2023/3/Spanish_Wine#HighRating -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/irene/ontologies/2023/3/Spanish_Wine#HighRating">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/irene/ontologies/2023/3/Spanish_Wine#Rating"/>
+        <rdfs:comment>Qualificació alta dels vins</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/irene/ontologies/2023/3/Spanish_Wine#Location -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/irene/ontologies/2023/3/Spanish_Wine#Location">
+        <rdfs:comment>Recull la localització dels vins</rdfs:comment>
+        <rdfs:sameAs>https://dbpedia.org/page/Location_(geography</rdfs:sameAs>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/irene/ontologies/2023/3/Spanish_Wine#LowAcidity -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/irene/ontologies/2023/3/Spanish_Wine#LowAcidity">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/irene/ontologies/2023/3/Spanish_Wine#Acidity"/>
+        <rdfs:comment>indica que el nivell d&apos;acidesa del vi és baix</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/irene/ontologies/2023/3/Spanish_Wine#LowInteraction -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/irene/ontologies/2023/3/Spanish_Wine#LowInteraction">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/irene/ontologies/2023/3/Spanish_Wine#NumReviews"/>
+        <rdfs:comment>Vins amb menor nombre de valoracions</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/irene/ontologies/2023/3/Spanish_Wine#LowRating -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/irene/ontologies/2023/3/Spanish_Wine#LowRating">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/irene/ontologies/2023/3/Spanish_Wine#Rating"/>
+        <rdfs:comment>Qualificació baixa dels vins</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/irene/ontologies/2023/3/Spanish_Wine#MediumRating -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/irene/ontologies/2023/3/Spanish_Wine#MediumRating">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/irene/ontologies/2023/3/Spanish_Wine#Rating"/>
+        <rdfs:comment>Qualificació mitjana dels vins</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/irene/ontologies/2023/3/Spanish_Wine#NumReviews -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/irene/ontologies/2023/3/Spanish_Wine#NumReviews">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/irene/ontologies/2023/3/Spanish_Wine#FeedBack"/>
+        <rdfs:comment>Recull el nombre de valoracions dels vins</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/irene/ontologies/2023/3/Spanish_Wine#OlderThan2000 -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/irene/ontologies/2023/3/Spanish_Wine#OlderThan2000">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/irene/ontologies/2023/3/Spanish_Wine#Year"/>
+        <rdfs:comment>Recull els vins més antics del 2000</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/irene/ontologies/2023/3/Spanish_Wine#Price -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/irene/ontologies/2023/3/Spanish_Wine#Price">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/irene/ontologies/2023/3/Spanish_Wine#WineCharacteristics"/>
+        <rdfs:comment>Indica el preu dels vins</rdfs:comment>
+        <rdfs:sameAs>https://dbpedia.org/page/Price</rdfs:sameAs>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/irene/ontologies/2023/3/Spanish_Wine#Rating -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/irene/ontologies/2023/3/Spanish_Wine#Rating">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/irene/ontologies/2023/3/Spanish_Wine#FeedBack"/>
+        <rdfs:comment>Recull la qualificació dels vins</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/irene/ontologies/2023/3/Spanish_Wine#RedWine -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/irene/ontologies/2023/3/Spanish_Wine#RedWine">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/irene/ontologies/2023/3/Spanish_Wine#WineType"/>
+        <rdfs:comment>Recull els vins que són vermells</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/irene/ontologies/2023/3/Spanish_Wine#Region -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/irene/ontologies/2023/3/Spanish_Wine#Region">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/irene/ontologies/2023/3/Spanish_Wine#Location"/>
+        <rdfs:comment>Indica la regió d&apos;origen dels vins</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/irene/ontologies/2023/3/Spanish_Wine#SparklingWine -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/irene/ontologies/2023/3/Spanish_Wine#SparklingWine">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/irene/ontologies/2023/3/Spanish_Wine#WineType"/>
+        <rdfs:comment>recull els vins que tenen gas</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/irene/ontologies/2023/3/Spanish_Wine#Time -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/irene/ontologies/2023/3/Spanish_Wine#Time">
+        <rdfs:comment>Recull les dates en què es va fabricar els vins</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/irene/ontologies/2023/3/Spanish_Wine#WhiteWine -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/irene/ontologies/2023/3/Spanish_Wine#WhiteWine">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/irene/ontologies/2023/3/Spanish_Wine#WineType"/>
+        <rdfs:comment>recull els vins que són blancs</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/irene/ontologies/2023/3/Spanish_Wine#WineCharacteristics -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/irene/ontologies/2023/3/Spanish_Wine#WineCharacteristics">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/irene/ontologies/2023/3/Spanish_Wine#Winery"/>
+        <rdfs:comment>recull el conjunt de característiques específiques de cada vi</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/irene/ontologies/2023/3/Spanish_Wine#WineType -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/irene/ontologies/2023/3/Spanish_Wine#WineType">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/irene/ontologies/2023/3/Spanish_Wine#WineCharacteristics"/>
+        <rdfs:comment>Indica el tipus de vi</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/irene/ontologies/2023/3/Spanish_Wine#Winery -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/irene/ontologies/2023/3/Spanish_Wine#Winery">
+        <rdfs:comment>Indica el celler</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/irene/ontologies/2023/3/Spanish_Wine#Year -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/irene/ontologies/2023/3/Spanish_Wine#Year">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/irene/ontologies/2023/3/Spanish_Wine#Time"/>
+        <rdfs:comment>recull l&apos;any en concret en què es van fer els vins</rdfs:comment>
+        <rdfs:sameAs>https://dbpedia.org/page/Year</rdfs:sameAs>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/irene/ontologies/2023/3/Spanish_Wine#YoungerThan2000 -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/irene/ontologies/2023/3/Spanish_Wine#YoungerThan2000">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/irene/ontologies/2023/3/Spanish_Wine#Year"/>
+        <rdfs:comment>Recull els vins més joves del 2000</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Annotations
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    <rdf:Description rdf:about="http://www.semanticweb.org/irene/ontologies/2023/3/Spanish_Wine#Wine">
+        <rdfs:comment>Indica els noms dels vins</rdfs:comment>
+    </rdf:Description>
+</rdf:RDF>
+
+
+
+<!-- Generated by the OWL API (version 4.5.25.2023-02-15T19:15:49Z) https://github.com/owlcs/owlapi -->
+
