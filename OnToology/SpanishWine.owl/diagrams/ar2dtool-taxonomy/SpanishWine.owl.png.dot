@@ -1,0 +1,30 @@
+digraph ar2dtool_diagram { 
+rankdir=LR;
+size="1000"
+node [shape = rectangle, color="black"]; "Spanish_Wine:Country" "Spanish_Wine:Rating" "Spanish_Wine:LowInteraction" "Spanish_Wine:Location" "Spanish_Wine:Acidity" "Spanish_Wine:CheapPrice" "Spanish_Wine:Region" "Spanish_Wine:LowRating" "Spanish_Wine:WineType" "Spanish_Wine:WineCharacteristics" "Spanish_Wine:AcidityFree" "Spanish_Wine:Body" "Spanish_Wine:HighAcidity" "Spanish_Wine:Year" "Spanish_Wine:ExpensivePrice" "Spanish_Wine:YoungerThan2000" "Spanish_Wine:WhiteWine" "Spanish_Wine:RedWine" "Spanish_Wine:HighRating" "Spanish_Wine:MediumRating" "Spanish_Wine:HighInteraction" "Spanish_Wine:SparklingWine" "Spanish_Wine:NumReviews" "Spanish_Wine:LowAcidity" "Spanish_Wine:OlderThan2000" "Spanish_Wine:Time" "Spanish_Wine:FeedBack" "Spanish_Wine:Price" ; /*classes style*/
+	"Spanish_Wine:OlderThan2000" -> "Spanish_Wine:Year" [ label = "rdfs:subClassOf" ];
+	"Spanish_Wine:LowRating" -> "Spanish_Wine:Rating" [ label = "rdfs:subClassOf" ];
+	"Spanish_Wine:HighRating" -> "Spanish_Wine:Rating" [ label = "rdfs:subClassOf" ];
+	"Spanish_Wine:RedWine" -> "Spanish_Wine:WineType" [ label = "rdfs:subClassOf" ];
+	"Spanish_Wine:WhiteWine" -> "Spanish_Wine:WineType" [ label = "rdfs:subClassOf" ];
+	"Spanish_Wine:Body" -> "Spanish_Wine:WineCharacteristics" [ label = "rdfs:subClassOf" ];
+	"Spanish_Wine:LowInteraction" -> "Spanish_Wine:NumReviews" [ label = "rdfs:subClassOf" ];
+	"Spanish_Wine:ExpensivePrice" -> "Spanish_Wine:Price" [ label = "rdfs:subClassOf" ];
+	"Spanish_Wine:HighAcidity" -> "Spanish_Wine:Acidity" [ label = "rdfs:subClassOf" ];
+	"Spanish_Wine:NumReviews" -> "Spanish_Wine:FeedBack" [ label = "rdfs:subClassOf" ];
+	"Spanish_Wine:SparklingWine" -> "Spanish_Wine:WineType" [ label = "rdfs:subClassOf" ];
+	"Spanish_Wine:YoungerThan2000" -> "Spanish_Wine:Year" [ label = "rdfs:subClassOf" ];
+	"Spanish_Wine:Year" -> "Spanish_Wine:Time" [ label = "rdfs:subClassOf" ];
+	"Spanish_Wine:Country" -> "Spanish_Wine:Location" [ label = "rdfs:subClassOf" ];
+	"Spanish_Wine:AcidityFree" -> "Spanish_Wine:Acidity" [ label = "rdfs:subClassOf" ];
+	"Spanish_Wine:HighInteraction" -> "Spanish_Wine:NumReviews" [ label = "rdfs:subClassOf" ];
+	"Spanish_Wine:Region" -> "Spanish_Wine:Location" [ label = "rdfs:subClassOf" ];
+	"Spanish_Wine:WineType" -> "Spanish_Wine:WineCharacteristics" [ label = "rdfs:subClassOf" ];
+	"Spanish_Wine:LowAcidity" -> "Spanish_Wine:Acidity" [ label = "rdfs:subClassOf" ];
+	"Spanish_Wine:CheapPrice" -> "Spanish_Wine:Price" [ label = "rdfs:subClassOf" ];
+	"Spanish_Wine:Price" -> "Spanish_Wine:WineCharacteristics" [ label = "rdfs:subClassOf" ];
+	"Spanish_Wine:Acidity" -> "Spanish_Wine:WineCharacteristics" [ label = "rdfs:subClassOf" ];
+	"Spanish_Wine:Rating" -> "Spanish_Wine:FeedBack" [ label = "rdfs:subClassOf" ];
+	"Spanish_Wine:MediumRating" -> "Spanish_Wine:Rating" [ label = "rdfs:subClassOf" ];
+
+}
