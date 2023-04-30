@@ -1,0 +1,132 @@
+{
+  "@context" : {
+    "WineType" : {
+      "@id" : "http://www.semanticweb.org/irene/ontologies/2023/3/Spanish_Wine#WineType"
+    },
+    "Winery" : {
+      "@id" : "http://www.semanticweb.org/irene/ontologies/2023/3/Spanish_Wine#Winery"
+    },
+    "CheapPrice" : {
+      "@id" : "http://www.semanticweb.org/irene/ontologies/2023/3/Spanish_Wine#CheapPrice"
+    },
+    "Country" : {
+      "@id" : "http://www.semanticweb.org/irene/ontologies/2023/3/Spanish_Wine#Country"
+    },
+    "OlderThan2000" : {
+      "@id" : "http://www.semanticweb.org/irene/ontologies/2023/3/Spanish_Wine#OlderThan2000"
+    },
+    "LowRating" : {
+      "@id" : "http://www.semanticweb.org/irene/ontologies/2023/3/Spanish_Wine#LowRating"
+    },
+    "AcidityFree" : {
+      "@id" : "http://www.semanticweb.org/irene/ontologies/2023/3/Spanish_Wine#AcidityFree"
+    },
+    "Body" : {
+      "@id" : "http://www.semanticweb.org/irene/ontologies/2023/3/Spanish_Wine#Body"
+    },
+    "HighAcidity" : {
+      "@id" : "http://www.semanticweb.org/irene/ontologies/2023/3/Spanish_Wine#HighAcidity"
+    },
+    "hasCheapPrice" : {
+      "@id" : "http://www.semanticweb.org/irene/ontologies/2023/3/Spanish_Wine#hasCheapPrice",
+      "@type" : "http://www.w3.org/2001/XMLSchema#integer"
+    },
+    "Location" : {
+      "@id" : "http://www.semanticweb.org/irene/ontologies/2023/3/Spanish_Wine#Location"
+    },
+    "hasAcidity" : {
+      "@id" : "http://www.semanticweb.org/irene/ontologies/2023/3/Spanish_Wine#hasAcidity",
+      "@type" : "@id"
+    },
+    "Price" : {
+      "@id" : "http://www.semanticweb.org/irene/ontologies/2023/3/Spanish_Wine#Price"
+    },
+    "hasWine" : {
+      "@id" : "http://www.semanticweb.org/irene/ontologies/2023/3/Spanish_Wine#hasWine",
+      "@type" : "@id"
+    },
+    "LowInteraction" : {
+      "@id" : "http://www.semanticweb.org/irene/ontologies/2023/3/Spanish_Wine#LowInteraction"
+    },
+    "WineCharacteristics" : {
+      "@id" : "http://www.semanticweb.org/irene/ontologies/2023/3/Spanish_Wine#WineCharacteristics"
+    },
+    "hasTime" : {
+      "@id" : "http://www.semanticweb.org/irene/ontologies/2023/3/Spanish_Wine#hasTime",
+      "@type" : "@id"
+    },
+    "hasExpencivePrice" : {
+      "@id" : "http://www.semanticweb.org/irene/ontologies/2023/3/Spanish_Wine#hasExpencivePrice",
+      "@type" : "http://www.w3.org/2001/XMLSchema#integer"
+    },
+    "hasRedWine" : {
+      "@id" : "http://www.semanticweb.org/irene/ontologies/2023/3/Spanish_Wine#hasRedWine",
+      "@type" : "http://www.w3.org/2001/XMLSchema#string"
+    },
+    "YoungerThan2000" : {
+      "@id" : "http://www.semanticweb.org/irene/ontologies/2023/3/Spanish_Wine#YoungerThan2000"
+    },
+    "Rating" : {
+      "@id" : "http://www.semanticweb.org/irene/ontologies/2023/3/Spanish_Wine#Rating"
+    },
+    "WhiteWine" : {
+      "@id" : "http://www.semanticweb.org/irene/ontologies/2023/3/Spanish_Wine#WhiteWine"
+    },
+    "HighInteraction" : {
+      "@id" : "http://www.semanticweb.org/irene/ontologies/2023/3/Spanish_Wine#HighInteraction"
+    },
+    "FeedBack" : {
+      "@id" : "http://www.semanticweb.org/irene/ontologies/2023/3/Spanish_Wine#FeedBack"
+    },
+    "SparklingWine" : {
+      "@id" : "http://www.semanticweb.org/irene/ontologies/2023/3/Spanish_Wine#SparklingWine"
+    },
+    "LowAcidity" : {
+      "@id" : "http://www.semanticweb.org/irene/ontologies/2023/3/Spanish_Wine#LowAcidity"
+    },
+    "Acidity" : {
+      "@id" : "http://www.semanticweb.org/irene/ontologies/2023/3/Spanish_Wine#Acidity"
+    },
+    "Year" : {
+      "@id" : "http://www.semanticweb.org/irene/ontologies/2023/3/Spanish_Wine#Year"
+    },
+    "hasHighRating" : {
+      "@id" : "http://www.semanticweb.org/irene/ontologies/2023/3/Spanish_Wine#hasHighRating",
+      "@type" : "http://www.w3.org/2001/XMLSchema#decimal"
+    },
+    "sameAs" : {
+      "@id" : "http://www.w3.org/2000/01/rdf-schema#sameAs"
+    },
+    "comment" : {
+      "@id" : "http://www.w3.org/2000/01/rdf-schema#comment"
+    },
+    "HighRating" : {
+      "@id" : "http://www.semanticweb.org/irene/ontologies/2023/3/Spanish_Wine#HighRating"
+    },
+    "NumReviews" : {
+      "@id" : "http://www.semanticweb.org/irene/ontologies/2023/3/Spanish_Wine#NumReviews"
+    },
+    "ExpensivePrice" : {
+      "@id" : "http://www.semanticweb.org/irene/ontologies/2023/3/Spanish_Wine#ExpensivePrice"
+    },
+    "Region" : {
+      "@id" : "http://www.semanticweb.org/irene/ontologies/2023/3/Spanish_Wine#Region"
+    },
+    "hasCountry" : {
+      "@id" : "http://www.semanticweb.org/irene/ontologies/2023/3/Spanish_Wine#hasCountry",
+      "@type" : "@id"
+    },
+    "MediumRating" : {
+      "@id" : "http://www.semanticweb.org/irene/ontologies/2023/3/Spanish_Wine#MediumRating"
+    },
+    "Time" : {
+      "@id" : "http://www.semanticweb.org/irene/ontologies/2023/3/Spanish_Wine#Time"
+    },
+    "RedWine" : {
+      "@id" : "http://www.semanticweb.org/irene/ontologies/2023/3/Spanish_Wine#RedWine"
+    },
+    "Wine" : {
+      "@id" : "http://www.semanticweb.org/irene/ontologies/2023/3/Spanish_Wine#Wine"
+    }
+  }
+}
