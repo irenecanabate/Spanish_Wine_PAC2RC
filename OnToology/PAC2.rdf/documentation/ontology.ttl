@@ -1,0 +1,422 @@
+@prefix : <http://www.semanticweb.org/irene/ontologies/2023/3/Spanish_Wine#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix xml: <http://www.w3.org/XML/1998/namespace> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@base <http://www.semanticweb.org/irene/ontologies/2023/3/Spanish_Wine#> .
+
+<http://www.semanticweb.org/irene/ontologies/2023/3/Spanish_Wine> rdf:type owl:Ontology ;
+                                                                   rdfs:comment """@Authors:
+Irene Cañabate Redondo""" .
+
+#################################################################
+#    Annotation properties
+#################################################################
+
+###  http://www.w3.org/2000/01/rdf-schema#sameAs
+rdfs:sameAs rdf:type owl:AnnotationProperty .
+
+
+#################################################################
+#    Object Properties
+#################################################################
+
+###  http://www.semanticweb.org/irene/ontologies/2023/3/Spanish_Wine#hasAcidity
+:hasAcidity rdf:type owl:ObjectProperty ;
+            rdfs:domain :Wine ;
+            rdfs:range :Acidity .
+
+
+###  http://www.semanticweb.org/irene/ontologies/2023/3/Spanish_Wine#hasCountry
+:hasCountry rdf:type owl:ObjectProperty ;
+            rdfs:domain :Region ;
+            rdfs:range :Country .
+
+
+###  http://www.semanticweb.org/irene/ontologies/2023/3/Spanish_Wine#hasTime
+:hasTime rdf:type owl:ObjectProperty ;
+         rdfs:domain :Wine ;
+         rdfs:range :Time .
+
+
+###  http://www.semanticweb.org/irene/ontologies/2023/3/Spanish_Wine#hasWine
+:hasWine rdf:type owl:ObjectProperty ;
+         rdfs:domain :Winery ;
+         rdfs:range :Wine .
+
+
+#################################################################
+#    Data properties
+#################################################################
+
+###  http://www.semanticweb.org/irene/ontologies/2023/3/Spanish_Wine#hasCheapPrice
+:hasCheapPrice rdf:type owl:DatatypeProperty ;
+               rdfs:domain :CheapPrice ;
+               rdfs:range xsd:integer .
+
+
+###  http://www.semanticweb.org/irene/ontologies/2023/3/Spanish_Wine#hasExpencivePrice
+:hasExpencivePrice rdf:type owl:DatatypeProperty ;
+                   rdfs:domain :ExpensivePrice ;
+                   rdfs:range xsd:integer .
+
+
+###  http://www.semanticweb.org/irene/ontologies/2023/3/Spanish_Wine#hasHighRating
+:hasHighRating rdf:type owl:DatatypeProperty ;
+               rdfs:domain :HighRating ;
+               rdfs:range xsd:decimal .
+
+
+###  http://www.semanticweb.org/irene/ontologies/2023/3/Spanish_Wine#hasRedWine
+:hasRedWine rdf:type owl:DatatypeProperty ;
+            rdfs:domain :RedWine ;
+            rdfs:range xsd:string .
+
+
+#################################################################
+#    Classes
+#################################################################
+
+###  http://www.semanticweb.org/irene/ontologies/2023/3/Spanish_Wine#Acidity
+:Acidity rdf:type owl:Class ;
+         rdfs:subClassOf :WineCharacteristics ;
+         rdfs:comment "Recull el nivell d'acidesa dels vins" .
+
+
+###  http://www.semanticweb.org/irene/ontologies/2023/3/Spanish_Wine#AcidityFree
+:AcidityFree rdf:type owl:Class ;
+             rdfs:subClassOf :Acidity ;
+             rdfs:comment "Indica que el vi no és àcid" .
+
+
+###  http://www.semanticweb.org/irene/ontologies/2023/3/Spanish_Wine#Body
+:Body rdf:type owl:Class ;
+      rdfs:subClassOf :WineCharacteristics ;
+      rdfs:comment "Recull el valor del cos dels vins" .
+
+
+###  http://www.semanticweb.org/irene/ontologies/2023/3/Spanish_Wine#CheapPrice
+:CheapPrice rdf:type owl:Class ;
+            rdfs:subClassOf :Price ;
+            owl:disjointWith :ExpensivePrice ;
+            rdfs:comment "Recull els vins barats" .
+
+
+###  http://www.semanticweb.org/irene/ontologies/2023/3/Spanish_Wine#Country
+:Country rdf:type owl:Class ;
+         rdfs:subClassOf :Location ;
+         rdfs:comment "Indica el país d'origen dels vins" .
+
+
+###  http://www.semanticweb.org/irene/ontologies/2023/3/Spanish_Wine#ExpensivePrice
+:ExpensivePrice rdf:type owl:Class ;
+                rdfs:subClassOf :Price ;
+                rdfs:comment "Recull els vins cars" .
+
+
+###  http://www.semanticweb.org/irene/ontologies/2023/3/Spanish_Wine#FeedBack
+:FeedBack rdf:type owl:Class ;
+          rdfs:comment "Recull el nombre de valoracions i la qualificació dels vins" .
+
+
+###  http://www.semanticweb.org/irene/ontologies/2023/3/Spanish_Wine#HighAcidity
+:HighAcidity rdf:type owl:Class ;
+             rdfs:subClassOf :Acidity ;
+             rdfs:comment "indica si el vi és molt àcid" .
+
+
+###  http://www.semanticweb.org/irene/ontologies/2023/3/Spanish_Wine#HighInteraction
+:HighInteraction rdf:type owl:Class ;
+                 rdfs:subClassOf :NumReviews ;
+                 owl:disjointWith :LowInteraction ;
+                 rdfs:comment "Vins amb més nombre de valoracions" .
+
+
+###  http://www.semanticweb.org/irene/ontologies/2023/3/Spanish_Wine#HighRating
+:HighRating rdf:type owl:Class ;
+            rdfs:subClassOf :Rating ;
+            rdfs:comment "Qualificació alta dels vins" .
+
+
+###  http://www.semanticweb.org/irene/ontologies/2023/3/Spanish_Wine#Location
+:Location rdf:type owl:Class ;
+          rdfs:comment "Recull la localització dels vins" ;
+          rdfs:sameAs "https://dbpedia.org/page/Location_(geography" .
+
+
+###  http://www.semanticweb.org/irene/ontologies/2023/3/Spanish_Wine#LowAcidity
+:LowAcidity rdf:type owl:Class ;
+            rdfs:subClassOf :Acidity ;
+            rdfs:comment "indica que el nivell d'acidesa del vi és baix" .
+
+
+###  http://www.semanticweb.org/irene/ontologies/2023/3/Spanish_Wine#LowInteraction
+:LowInteraction rdf:type owl:Class ;
+                rdfs:subClassOf :NumReviews ;
+                rdfs:comment "Vins amb menor nombre de valoracions" .
+
+
+###  http://www.semanticweb.org/irene/ontologies/2023/3/Spanish_Wine#LowRating
+:LowRating rdf:type owl:Class ;
+           rdfs:subClassOf :Rating ;
+           rdfs:comment "Qualificació baixa dels vins" .
+
+
+###  http://www.semanticweb.org/irene/ontologies/2023/3/Spanish_Wine#MediumRating
+:MediumRating rdf:type owl:Class ;
+              rdfs:subClassOf :Rating ;
+              rdfs:comment "Qualificació mitjana dels vins" .
+
+
+###  http://www.semanticweb.org/irene/ontologies/2023/3/Spanish_Wine#NumReviews
+:NumReviews rdf:type owl:Class ;
+            rdfs:subClassOf :FeedBack ;
+            rdfs:comment "Recull el nombre de valoracions dels vins" .
+
+
+###  http://www.semanticweb.org/irene/ontologies/2023/3/Spanish_Wine#OlderThan2000
+:OlderThan2000 rdf:type owl:Class ;
+               rdfs:subClassOf :Year ;
+               rdfs:comment "Recull els vins més antics del 2000" .
+
+
+###  http://www.semanticweb.org/irene/ontologies/2023/3/Spanish_Wine#Price
+:Price rdf:type owl:Class ;
+       rdfs:subClassOf :WineCharacteristics ;
+       rdfs:comment "Indica el preu dels vins" ;
+       rdfs:sameAs "https://dbpedia.org/page/Price" .
+
+
+###  http://www.semanticweb.org/irene/ontologies/2023/3/Spanish_Wine#Rating
+:Rating rdf:type owl:Class ;
+        rdfs:subClassOf :FeedBack ;
+        rdfs:comment "Recull la qualificació dels vins" .
+
+
+###  http://www.semanticweb.org/irene/ontologies/2023/3/Spanish_Wine#RedWine
+:RedWine rdf:type owl:Class ;
+         rdfs:subClassOf :WineType ;
+         rdfs:comment "Recull els vins que són vermells" .
+
+
+###  http://www.semanticweb.org/irene/ontologies/2023/3/Spanish_Wine#Region
+:Region rdf:type owl:Class ;
+        rdfs:subClassOf :Location ;
+        rdfs:comment "Indica la regió d'origen dels vins" .
+
+
+###  http://www.semanticweb.org/irene/ontologies/2023/3/Spanish_Wine#SparklingWine
+:SparklingWine rdf:type owl:Class ;
+               rdfs:subClassOf :WineType ;
+               rdfs:comment "recull els vins que tenen gas" .
+
+
+###  http://www.semanticweb.org/irene/ontologies/2023/3/Spanish_Wine#Time
+:Time rdf:type owl:Class ;
+      rdfs:comment "Recull les dates en què es va fabricar els vins" .
+
+
+###  http://www.semanticweb.org/irene/ontologies/2023/3/Spanish_Wine#WhiteWine
+:WhiteWine rdf:type owl:Class ;
+           rdfs:subClassOf :WineType ;
+           rdfs:comment "recull els vins que són blancs" .
+
+
+###  http://www.semanticweb.org/irene/ontologies/2023/3/Spanish_Wine#Wine
+:Wine rdf:type owl:Class ;
+      rdfs:comment "Indica els noms dels vins" .
+
+
+###  http://www.semanticweb.org/irene/ontologies/2023/3/Spanish_Wine#WineCharacteristics
+:WineCharacteristics rdf:type owl:Class ;
+                     rdfs:subClassOf [ rdf:type owl:Restriction ;
+                                       owl:onProperty :hasWine ;
+                                       owl:someValuesFrom :Wine
+                                     ] ;
+                     rdfs:comment "recull el conjunt de característiques específiques de cada vi" .
+
+
+###  http://www.semanticweb.org/irene/ontologies/2023/3/Spanish_Wine#WineType
+:WineType rdf:type owl:Class ;
+          rdfs:subClassOf :WineCharacteristics ;
+          rdfs:comment "Indica el tipus de vi" .
+
+
+###  http://www.semanticweb.org/irene/ontologies/2023/3/Spanish_Wine#Winery
+:Winery rdf:type owl:Class ;
+        rdfs:comment "Indica el celler" .
+
+
+###  http://www.semanticweb.org/irene/ontologies/2023/3/Spanish_Wine#Year
+:Year rdf:type owl:Class ;
+      rdfs:subClassOf :Time ;
+      rdfs:comment "recull l'any en concret en què es van fer els vins" ;
+      rdfs:sameAs "https://dbpedia.org/page/Year" .
+
+
+###  http://www.semanticweb.org/irene/ontologies/2023/3/Spanish_Wine#YoungerThan2000
+:YoungerThan2000 rdf:type owl:Class ;
+                 rdfs:subClassOf :Year ;
+                 rdfs:comment "Recull els vins més joves del 2000" .
+
+
+#################################################################
+#    Individuals
+#################################################################
+
+###  http://www.semanticweb.org/irene/ontologies/2023/3/Spanish_Wine#Artadi
+:Artadi rdf:type owl:NamedIndividual ,
+                 :Winery ;
+        :hasWine :Pingus ;
+        :hasRedWine "RiojaRed" .
+
+
+###  http://www.semanticweb.org/irene/ontologies/2023/3/Spanish_Wine#Espana
+:Espana rdf:type owl:NamedIndividual ,
+                 :Country .
+
+
+###  http://www.semanticweb.org/irene/ontologies/2023/3/Spanish_Wine#Pingus
+:Pingus rdf:type owl:NamedIndividual ,
+                 :Wine ;
+        :hasAcidity <http://www.semanticweb.org/irene/ontologies/2023/3/Spanish_Wine#4> ;
+        :hasExpencivePrice 1500 ;
+        :hasHighRating 4.5 .
+
+
+###  http://www.semanticweb.org/irene/ontologies/2023/3/Spanish_Wine#RiberaDelDueroRed
+:RiberaDelDueroRed rdf:type owl:NamedIndividual ,
+                            :RedWine .
+
+
+###  http://www.semanticweb.org/irene/ontologies/2023/3/Spanish_Wine#Rioja
+:Rioja rdf:type owl:NamedIndividual ,
+                :Region ;
+       :hasCountry :Espana .
+
+
+###  http://www.semanticweb.org/irene/ontologies/2023/3/Spanish_Wine#4
+<http://www.semanticweb.org/irene/ontologies/2023/3/Spanish_Wine#4> rdf:type owl:NamedIndividual ,
+                                                                             :Acidity .
+
+
+#################################################################
+#    Rules
+#################################################################
+
+<urn:swrl:var#p> rdf:type <http://www.w3.org/2003/11/swrl#Variable> .
+
+<urn:swrl:var#h> rdf:type <http://www.w3.org/2003/11/swrl#Variable> .
+
+<urn:swrl:var#r> rdf:type <http://www.w3.org/2003/11/swrl#Variable> .
+
+[ rdf:type <http://www.w3.org/2003/11/swrl#Imp> ;
+   <http://www.w3.org/2003/11/swrl#body> [ rdf:type <http://www.w3.org/2003/11/swrl#AtomList> ;
+                                           rdf:first [ rdf:type <http://www.w3.org/2003/11/swrl#ClassAtom> ;
+                                                       <http://www.w3.org/2003/11/swrl#classPredicate> :Price ;
+                                                       <http://www.w3.org/2003/11/swrl#argument1> <urn:swrl:var#p>
+                                                     ] ;
+                                           rdf:rest [ rdf:type <http://www.w3.org/2003/11/swrl#AtomList> ;
+                                                      rdf:first [ rdf:type <http://www.w3.org/2003/11/swrl#BuiltinAtom> ;
+                                                                  <http://www.w3.org/2003/11/swrl#builtin> <http://www.w3.org/2003/11/swrlb#lessThanOrEqual> ;
+                                                                  <http://www.w3.org/2003/11/swrl#arguments> [ rdf:type rdf:List ;
+                                                                                                               rdf:first <urn:swrl:var#h> ;
+                                                                                                               rdf:rest [ rdf:type rdf:List ;
+                                                                                                                          rdf:first 20 ;
+                                                                                                                          rdf:rest rdf:nil
+                                                                                                                        ]
+                                                                                                             ]
+                                                                ] ;
+                                                      rdf:rest [ rdf:type <http://www.w3.org/2003/11/swrl#AtomList> ;
+                                                                 rdf:first [ rdf:type <http://www.w3.org/2003/11/swrl#DatavaluedPropertyAtom> ;
+                                                                             <http://www.w3.org/2003/11/swrl#propertyPredicate> :hasCheapPrice ;
+                                                                             <http://www.w3.org/2003/11/swrl#argument1> <urn:swrl:var#p> ;
+                                                                             <http://www.w3.org/2003/11/swrl#argument2> <urn:swrl:var#h>
+                                                                           ] ;
+                                                                 rdf:rest rdf:nil
+                                                               ]
+                                                    ]
+                                         ] ;
+   <http://www.w3.org/2003/11/swrl#head> [ rdf:type <http://www.w3.org/2003/11/swrl#AtomList> ;
+                                           rdf:first [ rdf:type <http://www.w3.org/2003/11/swrl#ClassAtom> ;
+                                                       <http://www.w3.org/2003/11/swrl#classPredicate> :CheapPrice ;
+                                                       <http://www.w3.org/2003/11/swrl#argument1> <urn:swrl:var#p>
+                                                     ] ;
+                                           rdf:rest rdf:nil
+                                         ]
+ ] .
+
+[ rdf:type <http://www.w3.org/2003/11/swrl#Imp> ;
+   <http://www.w3.org/2003/11/swrl#body> [ rdf:type <http://www.w3.org/2003/11/swrl#AtomList> ;
+                                           rdf:first [ rdf:type <http://www.w3.org/2003/11/swrl#ClassAtom> ;
+                                                       <http://www.w3.org/2003/11/swrl#classPredicate> :Price ;
+                                                       <http://www.w3.org/2003/11/swrl#argument1> <urn:swrl:var#p>
+                                                     ] ;
+                                           rdf:rest [ rdf:type <http://www.w3.org/2003/11/swrl#AtomList> ;
+                                                      rdf:first [ rdf:type <http://www.w3.org/2003/11/swrl#BuiltinAtom> ;
+                                                                  <http://www.w3.org/2003/11/swrl#builtin> <http://www.w3.org/2003/11/swrlb#greaterThan> ;
+                                                                  <http://www.w3.org/2003/11/swrl#arguments> [ rdf:type rdf:List ;
+                                                                                                               rdf:first <urn:swrl:var#h> ;
+                                                                                                               rdf:rest [ rdf:type rdf:List ;
+                                                                                                                          rdf:first 20 ;
+                                                                                                                          rdf:rest rdf:nil
+                                                                                                                        ]
+                                                                                                             ]
+                                                                ] ;
+                                                      rdf:rest [ rdf:type <http://www.w3.org/2003/11/swrl#AtomList> ;
+                                                                 rdf:first [ rdf:type <http://www.w3.org/2003/11/swrl#DatavaluedPropertyAtom> ;
+                                                                             <http://www.w3.org/2003/11/swrl#propertyPredicate> :hasExpencivePrice ;
+                                                                             <http://www.w3.org/2003/11/swrl#argument1> <urn:swrl:var#p> ;
+                                                                             <http://www.w3.org/2003/11/swrl#argument2> <urn:swrl:var#h>
+                                                                           ] ;
+                                                                 rdf:rest rdf:nil
+                                                               ]
+                                                    ]
+                                         ] ;
+   <http://www.w3.org/2003/11/swrl#head> [ rdf:type <http://www.w3.org/2003/11/swrl#AtomList> ;
+                                           rdf:first [ rdf:type <http://www.w3.org/2003/11/swrl#ClassAtom> ;
+                                                       <http://www.w3.org/2003/11/swrl#classPredicate> :ExpensivePrice ;
+                                                       <http://www.w3.org/2003/11/swrl#argument1> <urn:swrl:var#p>
+                                                     ] ;
+                                           rdf:rest rdf:nil
+                                         ]
+ ] .
+
+[ rdf:type <http://www.w3.org/2003/11/swrl#Imp> ;
+   <http://www.w3.org/2003/11/swrl#body> [ rdf:type <http://www.w3.org/2003/11/swrl#AtomList> ;
+                                           rdf:first [ rdf:type <http://www.w3.org/2003/11/swrl#ClassAtom> ;
+                                                       <http://www.w3.org/2003/11/swrl#classPredicate> :Rating ;
+                                                       <http://www.w3.org/2003/11/swrl#argument1> <urn:swrl:var#r>
+                                                     ] ;
+                                           rdf:rest [ rdf:type <http://www.w3.org/2003/11/swrl#AtomList> ;
+                                                      rdf:first [ rdf:type <http://www.w3.org/2003/11/swrl#BuiltinAtom> ;
+                                                                  <http://www.w3.org/2003/11/swrl#builtin> <http://www.w3.org/2003/11/swrlb#greaterThanOrEqual> ;
+                                                                  <http://www.w3.org/2003/11/swrl#arguments> [ rdf:type rdf:List ;
+                                                                                                               rdf:first <urn:swrl:var#h> ;
+                                                                                                               rdf:rest [ rdf:type rdf:List ;
+                                                                                                                          rdf:first 4 ;
+                                                                                                                          rdf:rest rdf:nil
+                                                                                                                        ]
+                                                                                                             ]
+                                                                ] ;
+                                                      rdf:rest [ rdf:type <http://www.w3.org/2003/11/swrl#AtomList> ;
+                                                                 rdf:first [ rdf:type <http://www.w3.org/2003/11/swrl#DatavaluedPropertyAtom> ;
+                                                                             <http://www.w3.org/2003/11/swrl#propertyPredicate> :hasHighRating ;
+                                                                             <http://www.w3.org/2003/11/swrl#argument1> <urn:swrl:var#r> ;
+                                                                             <http://www.w3.org/2003/11/swrl#argument2> <urn:swrl:var#h>
+                                                                           ] ;
+                                                                 rdf:rest rdf:nil
+                                                               ]
+                                                    ]
+                                         ] ;
+   <http://www.w3.org/2003/11/swrl#head> [ rdf:type <http://www.w3.org/2003/11/swrl#AtomList> ;
+                                           rdf:first [ rdf:type <http://www.w3.org/2003/11/swrl#ClassAtom> ;
+                                                       <http://www.w3.org/2003/11/swrl#classPredicate> :HighRating ;
+                                                       <http://www.w3.org/2003/11/swrl#argument1> <urn:swrl:var#r>
+                                                     ] ;
+                                           rdf:rest rdf:nil
+                                         ]
+ ] .
+
+###  Generated by the OWL API (version 5.1.18) https://github.com/owlcs/owlapi/
